@@ -14,6 +14,7 @@ class Menu:
         """
         order = int(input('Print orderId: '))
         print(self.LogisticSystem.track_order(order))
+    
     def add(self):
         """
         Add new order
