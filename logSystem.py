@@ -137,8 +137,11 @@ class LogisticSystem:
 
     def place_order(self, order):
         free_vehicle = self.get_free_vehicle()
-        order.assign_vehicle(free_vehicle)
-        self.orders.append(order)
+        if free_vehicle:
+            order.assign_vehicle(free_vehicle)
+            self.orders.append(order)
+        else:
+            print("There is no available vehicle to deliver an order.")
 
     def check_order(self, order_id):
         """

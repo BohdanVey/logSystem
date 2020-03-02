@@ -21,14 +21,14 @@ class Menu:
 
         user_name = input('Print user name: ')
         city = input('Print city: ')
-        postoficce = input('Print post office: ')
+        post_oficce = input('Print post office: ')
         number = input('Print number of Item: ')
         items = []
         for i in range(int(number)):
             name = input('Print name of item: ')
             price = float(input('Print price of item: '))
             items.append(logSystem.Item(name, price))
-        order = logSystem.Order(user_name, city, postoficce, items)
+        order = logSystem.Order(user_name, city, post_oficce, items)
         self.LogisticSystem.place_order(order)
 
     def menu(self):
